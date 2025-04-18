@@ -8,6 +8,8 @@
     <!-- Modern fonts with metal aesthetic -->
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
@@ -254,22 +256,19 @@
                             </table>
                         </div>
                         
-                        <div class="forum-login">
-                            <h3>Login to Post</h3>
-                            <form class="login-form">
-                                <div class="form-group">
-                                    <label for="username">Username:</label>
-                                    <input type="text" id="username" name="username" class="form-input">
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">Password:</label>
-                                    <input type="password" id="password" name="password" class="form-input">
-                                </div>
-                                <div class="form-buttons">
-                                    <button type="submit" class="btn">Login</button>
-                                    <button type="button" class="btn">Register</button>
-                                </div>
-                            </form>
+                        <div class="social-media-widget">
+                            <h3 class="widget-title">FOLLOW ME</h3>
+                            <div class="social-links">
+                                <a href="https://instagram.com/madusalves" class="social-link instagram" target="_blank">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </a>
+                                <a href="https://linkedin.com/in/madusalves" class="social-link linkedin" target="_blank">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="https://github.com/Madusalves" class="social-link github" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -302,8 +301,9 @@
                 <div class="sidebar-widget">
                     <h3 class="widget-title">METAL AWARDS</h3>
                     <div class="widget-content awards">
-                        <img src="images/award1.gif" alt="Best Metal Site Award">
-                        <img src="images/award2.gif" alt="Metal Webring Award">
+                        <h2>Best Metal Band Award</h2>
+                        <p>Vote for us!</p>
+                        <a href="#" class="vote-button">Vote Now</a>
                     </div>
                 </div>
                 
@@ -311,6 +311,49 @@
                     <h3 class="widget-title">UNDER CONSTRUCTION</h3>
                     <div class="widget-content">
                         <img src="images/construction.gif" alt="Under Construction">
+                    </div>
+                </div>
+                
+                <!-- Feedback Form Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">GIVE US FEEDBACK</h3>
+                    <div class="widget-content">
+                        <form id="sidebar-feedback-form" class="sidebar-feedback-form" action="https://formspree.io/f/moveodpd" method="POST">
+                            <div class="form-group">
+                                <label for="sidebar-name">Name:</label>
+                                <input type="text" id="sidebar-name" name="name" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="sidebar-email">Your Email:</label>
+                                <input type="email" id="sidebar-email" name="email" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="sidebar-rating">Rate Our Site:</label>
+                                <div class="rating-stars">
+                                    <input type="radio" id="sidebar-star5" name="rating" value="5" required>
+                                    <label for="sidebar-star5">★</label>
+                                    <input type="radio" id="sidebar-star4" name="rating" value="4">
+                                    <label for="sidebar-star4">★</label>
+                                    <input type="radio" id="sidebar-star3" name="rating" value="3">
+                                    <label for="sidebar-star3">★</label>
+                                    <input type="radio" id="sidebar-star2" name="rating" value="2">
+                                    <label for="sidebar-star2">★</label>
+                                    <input type="radio" id="sidebar-star1" name="rating" value="1">
+                                    <label for="sidebar-star1">★</label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="sidebar-message">Message:</label>
+                                <textarea id="sidebar-message" name="message" class="form-textarea" rows="3" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <button type="submit" class="submit-btn">SEND FEEDBACK 🤘</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </aside>
@@ -327,10 +370,256 @@
         </div>
     </footer>
     
+    <!-- Audio Player -->
+    <div class="audio-player">
+        <div class="audio-controls">
+            <div class="now-playing">
+                <div class="track-image">
+                    <img id="track-image" src="images/AX72025.jpeg" alt="Track Cover">
+                </div>
+                <div class="track-info">
+                    <span id="audio-title">Metal Madness Radio</span>
+                    <span id="track-artist">Metal Madness</span>
+                </div>
+            </div>
+            <div class="player-controls">
+                <button id="prev-track" class="audio-control-btn">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button id="audio-toggle" class="audio-toggle">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="next-track" class="audio-control-btn">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+            <div class="audio-progress">
+                <div id="audio-progress-bar" class="audio-progress-bar"></div>
+            </div>
+            <div class="volume-control">
+                <button id="volume-toggle" class="volume-toggle">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <input type="range" id="volume-slider" class="volume-slider" min="0" max="100" value="100">
+            </div>
+        </div>
+        <audio id="background-music" loop>
+            <source src="audio/nothing-else-matters.mp3" type="audio/mpeg">
+            <source src="audio/painkiller.mp3" type="audio/mpeg">
+            <source src="audio/bloodline.mp3" type="audio/mpeg">
+            <source src="audio/satanized.mp3" type="audio/mpeg">
+            <source src="audio/heavy-background.mp3" type="audio/mpeg">
+            <source src="audio/thrash-metal-riff.mp3" type="audio/mpeg">    
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
     <!-- Cursor trail effect -->
     <div id="cursor-trail"></div>
     
     <!-- JavaScript -->
     <script src="js/app.js"></script>
+    <script>
+        // Audio Player Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const audioToggle = document.getElementById('audio-toggle');
+            const prevTrackBtn = document.getElementById('prev-track');
+            const nextTrackBtn = document.getElementById('next-track');
+            const volumeToggle = document.getElementById('volume-toggle');
+            const volumeSlider = document.getElementById('volume-slider');
+            const backgroundMusic = document.getElementById('background-music');
+            const audioTitle = document.getElementById('audio-title');
+            const trackArtist = document.getElementById('track-artist');
+            const trackImage = document.getElementById('track-image');
+            const audioProgressBar = document.getElementById('audio-progress-bar');
+            const audioPlayer = document.querySelector('.audio-player');
+            
+            // Playlist of metal songs
+            const playlist = [
+                { 
+                    title: "Metallica", 
+                    artist: "Nothing Else Matters",
+                    src: "audio/metal-background.mp3",
+                    image: "images/nothing-else-matters.jpeg"
+                },
+                { 
+                    title: "Judas Priest", 
+                    artist: "Painkiller",
+                    src: "audio/heavy-background.mp3",
+                    image: "images/painkiller.jpeg"
+                },
+                { 
+                    title: "Slayer", 
+                    artist: "Bloodline",
+                    src: "audio/bloodline.mp3",
+                    image: "images/bloodline.jpeg"
+                },
+                { 
+                    title: "Ghost", 
+                    artist: "Satanized",
+                    src: "audio/satanized.mp3",
+                    image: "images/satanized.jpeg"
+                }
+            ];
+            
+            // Force autoplay on first visit
+            let isFirstVisit = !localStorage.getItem('hasVisited');
+            if (isFirstVisit) {
+                localStorage.setItem('hasVisited', 'true');
+                localStorage.setItem('isPlaying', 'true');
+            }
+            
+            // Get saved state from localStorage
+            let currentTrack = parseInt(localStorage.getItem('currentTrack')) || 0;
+            let isPlaying = localStorage.getItem('isPlaying') === 'true';
+            let volume = parseFloat(localStorage.getItem('volume')) || 1;
+            
+            // Set initial volume
+            backgroundMusic.volume = volume;
+            volumeSlider.value = volume * 100;
+            
+            // Set the current track
+            backgroundMusic.src = playlist[currentTrack].src;
+            audioTitle.textContent = playlist[currentTrack].title;
+            trackArtist.textContent = playlist[currentTrack].artist;
+            trackImage.src = playlist[currentTrack].image;
+            
+            // Function to start playing
+            function startPlaying() {
+                backgroundMusic.play().then(function() {
+                    isPlaying = true;
+                    audioToggle.innerHTML = '<i class="fas fa-pause"></i>';
+                    localStorage.setItem('isPlaying', 'true');
+                }).catch(function(error) {
+                    console.log("Autoplay prevented:", error);
+                    isPlaying = false;
+                    audioToggle.innerHTML = '<i class="fas fa-play"></i>';
+                    localStorage.setItem('isPlaying', 'false');
+                });
+            }
+            
+            // Function to pause playing
+            function pausePlaying() {
+                backgroundMusic.pause();
+                isPlaying = false;
+                audioToggle.innerHTML = '<i class="fas fa-play"></i>';
+                localStorage.setItem('isPlaying', 'false');
+            }
+            
+            // Function to change track
+            function changeTrack(direction) {
+                currentTrack = (currentTrack + direction + playlist.length) % playlist.length;
+                backgroundMusic.src = playlist[currentTrack].src;
+                audioTitle.textContent = playlist[currentTrack].title;
+                trackArtist.textContent = playlist[currentTrack].artist;
+                trackImage.src = playlist[currentTrack].image;
+                localStorage.setItem('currentTrack', currentTrack);
+                localStorage.setItem('currentTime', 0);
+                
+                if (isPlaying) {
+                    backgroundMusic.play();
+                }
+            }
+            
+            // Start playing if it was playing before or this is first visit
+            if (isPlaying || isFirstVisit) {
+                startPlaying();
+            } else {
+                audioToggle.innerHTML = '<i class="fas fa-play"></i>';
+            }
+            
+            // Toggle play/pause
+            audioToggle.addEventListener('click', function() {
+                if (isPlaying) {
+                    pausePlaying();
+                } else {
+                    startPlaying();
+                }
+            });
+            
+            // Previous track
+            prevTrackBtn.addEventListener('click', function() {
+                changeTrack(-1);
+            });
+            
+            // Next track
+            nextTrackBtn.addEventListener('click', function() {
+                changeTrack(1);
+            });
+            
+            // Volume control
+            volumeToggle.addEventListener('click', function() {
+                if (backgroundMusic.volume > 0) {
+                    backgroundMusic.volume = 0;
+                    volumeToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                } else {
+                    backgroundMusic.volume = volume;
+                    volumeToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+                }
+            });
+            
+            volumeSlider.addEventListener('input', function() {
+                const newVolume = this.value / 100;
+                backgroundMusic.volume = newVolume;
+                volume = newVolume;
+                localStorage.setItem('volume', volume);
+                
+                if (newVolume === 0) {
+                    volumeToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                } else {
+                    volumeToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+                }
+            });
+            
+            // Update progress bar
+            backgroundMusic.addEventListener('timeupdate', function() {
+                const progress = (backgroundMusic.currentTime / backgroundMusic.duration) * 100;
+                audioProgressBar.style.width = progress + '%';
+                
+                // Save current time to localStorage
+                localStorage.setItem('currentTime', backgroundMusic.currentTime);
+            });
+            
+            // Restore playback position after page reload
+            const savedTime = parseFloat(localStorage.getItem('currentTime'));
+            if (savedTime && !isNaN(savedTime)) {
+                backgroundMusic.currentTime = savedTime;
+            }
+            
+            // Change track when current one ends
+            backgroundMusic.addEventListener('ended', function() {
+                changeTrack(1);
+            });
+            
+            // Click on progress bar to seek
+            document.querySelector('.audio-progress').addEventListener('click', function(e) {
+                const rect = this.getBoundingClientRect();
+                const pos = (e.clientX - rect.left) / rect.width;
+                backgroundMusic.currentTime = pos * backgroundMusic.duration;
+            });
+            
+            // Save state before page unload
+            window.addEventListener('beforeunload', function() {
+                localStorage.setItem('currentTrack', currentTrack);
+                localStorage.setItem('currentTime', backgroundMusic.currentTime);
+                localStorage.setItem('isPlaying', isPlaying);
+                localStorage.setItem('volume', volume);
+            });
+            
+            // Try to resume playback if it was playing
+            window.addEventListener('focus', function() {
+                if (isPlaying && backgroundMusic.paused) {
+                    backgroundMusic.play();
+                }
+            });
+            
+            // Handle visibility change
+            document.addEventListener('visibilitychange', function() {
+                if (document.visibilityState === 'visible' && isPlaying && backgroundMusic.paused) {
+                    backgroundMusic.play();
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
