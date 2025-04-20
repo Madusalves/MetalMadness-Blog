@@ -20,5 +20,4 @@ Um blog nostálgico e dark dedicado ao mundo do metal!
 ![image](https://github.com/user-attachments/assets/e1587dc1-8e1e-4058-bed3-e9276065b648)
 
 
-## 🚀 Rodando localmente
 [...]
