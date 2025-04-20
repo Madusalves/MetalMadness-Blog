@@ -1,23 +1,22 @@
 # Metal Madness 🤘
-Um blog nostálgico e dark dedicado ao mundo do metal!
+A nostalgic and dark blog dedicated to the world of metal!
 
-## ⚙️ Tecnologias
+## ⚙️ Technologies
 - HTML
-- CSS
+-CSS
 - TailwindCSS
 - Javascript
 
-## 📦 Funcionalidades
-- Resenhas de álbuns
-- Playlist
-- Fórum e Posters
+## 📦 Features
+- Album Reviews
+-Playlist
+- Forum and Posters
 
-## 🛠️ Em desenvolvimento
-- Sistema de votação
-- Área de membros
+## 🛠️ In development
+- Voting system
+- Members Area
 
 ## 📸 Layout
-![image](https://github.com/user-attachments/assets/e1587dc1-8e1e-4058-bed3-e9276065b648)
-
+! [image](https://github.com/user-attachments/assets/e1587dc1-8e1e-4058-bed3-e9276065b648)
 
 [...]
