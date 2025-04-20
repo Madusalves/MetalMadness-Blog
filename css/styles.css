@@ -31,9 +31,11 @@
 }
 
 body {
-    font-family: 'Roboto Condensed', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
     line-height: 1.6;
     position: relative;
     overflow-x: hidden;
@@ -323,15 +325,14 @@ img {
 
 /* Hero Banner */
 .hero-banner {
-    background-image: url('../images/hero-banner.jpg');
+    background: url('../images/hero-banner.jpg');
     background-size: cover;
     background-position: center;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
     position: relative;
-    margin-bottom: 40px;
+    overflow: hidden;
 }
 
 .hero-banner::before {
@@ -339,51 +340,66 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.2), transparent);
+    z-index: 1;
 }
 
 .banner-content {
     position: relative;
-    text-align: center;
-    max-width: 800px;
-    padding: 0 20px;
+    z-index: 2;
 }
 
 .banner-title {
     font-family: 'Metal Mania', cursive;
     font-size: 3.5rem;
-    color: var(--primary-color);
-    text-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
-    margin-bottom: 20px;
-    animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-    }
-    to {
-        text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 102, 0, 0.6);
-    }
+    color: #ff0000;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
 }
 
 .banner-text {
     font-size: 1.2rem;
-    color: var(--text-color);
-    margin-bottom: 20px;
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
 }
 
 .visitor-counter {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 1rem;
+}
+
+.visitor-counter span {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px 20px;
-    border: 1px solid var(--primary-color);
-    border-radius: var(--border-radius);
-    color: var(--text-color);
-    font-family: monospace;
-    font-size: 1.1rem;
+}
+
+#visitor-counter {
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Mantendo os estilos antigos para compatibilidade */
+.hero-banner h1 {
+    font-family: 'Metal Mania', cursive;
+    font-size: 3.5rem;
+    color: #ff0000;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-banner p {
+    font-size: 1.2rem;
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 /* Main Container */
@@ -396,7 +412,10 @@ img {
 .content-wrapper {
     display: grid;
     grid-template-columns: 1fr 300px;
-    gap: 30px;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 /* Main Content */
@@ -989,7 +1008,7 @@ img {
         grid-template-columns: 1fr;
     }
     
-    .banner-title {
+    .hero-banner h1 {
         font-size: 2.5rem;
     }
 }
@@ -999,7 +1018,7 @@ img {
         grid-template-columns: 1fr;
     }
     
-    .banner-title {
+    .hero-banner h1 {
         font-size: 2rem;
     }
     
@@ -1286,13 +1305,11 @@ img {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: rgba(0, 0, 0, 0.9);
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
     z-index: 1000;
-    width: 250px;
+    transition: all 0.3s ease;
 }
 
 .audio-controls {
@@ -1537,5 +1554,327 @@ img {
 @media (max-width: 480px) {
     .spotify-playlist iframe {
         height: 350px;
+    }
+}
+
+/* Reviews Page Styles */
+.featured-review {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-review::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.1), transparent);
+    pointer-events: none;
+}
+
+.featured-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-image:hover img {
+    transform: scale(1.05);
+}
+
+.featured-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.featured-title {
+    font-family: 'Metal Mania', cursive;
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+.featured-date {
+    color: #888;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.review-rating {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.rating-label {
+    color: #888;
+    margin-right: 0.5rem;
+}
+
+.rating-stars {
+    color: #ff0000;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.featured-excerpt {
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.reviews-section {
+    margin-bottom: 3rem;
+}
+
+.reviews-section h2 {
+    font-family: 'Metal Mania', cursive;
+    font-size: 2rem;
+    color: #ff0000;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    position: relative;
+    padding-left: 1rem;
+}
+
+.reviews-section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 70%;
+    background: #ff0000;
+    border-radius: 2px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.review-item {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.review-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+}
+
+.review-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.review-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.review-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.review-item:hover .review-image img {
+    transform: scale(1.1);
+}
+
+.review-content {
+    padding: 1.5rem;
+    position: relative;
+}
+
+.review-content h3 {
+    font-family: 'Metal Mania', cursive;
+    font-size: 1.5rem;
+    color: #ff0000;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+
+.review-date {
+    color: #888;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.review-content p {
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.review-categories {
+    margin-bottom: 3rem;
+}
+
+.review-categories h2 {
+    font-family: 'Metal Mania', cursive;
+    font-size: 2rem;
+    color: #ff0000;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    position: relative;
+    padding-left: 1rem;
+}
+
+.review-categories h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 70%;
+    background: #ff0000;
+    border-radius: 2px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.category-card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+}
+
+.category-card:hover::before {
+    opacity: 1;
+}
+
+.category-icon {
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.category-card h3 {
+    font-family: 'Metal Mania', cursive;
+    font-size: 1.5rem;
+    color: #ff0000;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+
+.category-card p {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .featured-review {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-title {
+        font-size: 2rem;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-banner h1 {
+        font-size: 2rem;
+    }
+    
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-title {
+        font-size: 1.8rem;
+    }
+
+    .review-content h3 {
+        font-size: 1.3rem;
     }
 } 
