@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './main.module.css';
-
+import Image from 'next/image';
 
 
 
@@ -11,7 +11,13 @@ export default function Header() {
             <main className={styles.main_content}>
                 <section className={styles.featured_post}>
                     <div className={styles.featured_image}>
-                        <img src="" alt="Featured Metal Band" />
+                        <Image
+                            src="/AX72025.jpeg"
+                            alt="Featured Metal Band - Arch Enemy"
+                            width={600} // ajuste o tamanho conforme necessário
+                            height={400}
+                        />
+                        
                     </div>
                     <div className={styles.featured_content}>
                         <h2 className={styles.featured_title}>Avenged Sevenfold Announces New South American Tour</h2>
