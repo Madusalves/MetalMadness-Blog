@@ -1,8 +1,24 @@
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --primary-color: #ff0000;
+    --secondary-color: #000000;
+    --accent-color: #ff6600;
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --text-secondary: #cccccc;
+    --border-color: #333333;
+    --highlight-color: #ff3300;
+    --flame-gradient: linear-gradient(to bottom, #ff6600, #ff0000);
+    --metal-gradient: linear-gradient(to bottom, #333333, #000000);
+    --section-bg: #1a1a1a;
+    --card-bg: #222222;
+    --header-height: 80px;
+    --content-width: 1200px;
+    --border-radius: 4px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --transition: all 0.3s ease;
 }
 
 @theme inline {
@@ -19,8 +35,240 @@
   }
 }
 
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Flame Background */
+.flame-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-image: url('../images/flames-bg.jpg');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.8;
+    animation: flamePulse 8s infinite alternate;
+}
+
+@keyframes flamePulse {
+    0% {
+        opacity: 0.7;
+        filter: brightness(0.9);
+    }
+    50% {
+        opacity: 0.9;
+        filter: brightness(1.1);
+    }
+    100% {
+        opacity: 0.8;
+        filter: brightness(1);
+    }
+}
+
+/* Flame Background Effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-image: url('../images/flames-bg.jpg');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    z-index: -1;
+    animation: flameAnimation 8s infinite alternate;
+}
+
+@keyframes flameAnimation {
+    0% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.02);
+    }
+    100% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+}
+
+/* Lava Cascade Effect */
+.lava-cascade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.lava-stream {
+    position: absolute;
+    top: -20px;
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(to bottom, 
+        rgba(255, 0, 0, 0.8) 0%, 
+        rgba(255, 102, 0, 0.8) 50%, 
+        rgba(255, 0, 0, 0.8) 100%);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    animation: lavaStream 3s infinite linear;
+}
+
+.lava-droplet {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 102, 0, 0.8) 50%, rgba(255, 0, 0, 0.7) 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 102, 0, 0.6);
+    animation: lavaDrop 2s infinite ease-in;
+}
+
+@keyframes lavaStream {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes lavaDrop {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Lava Splash Effect */
+.lava-splash {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 102, 0, 0.8) 50%, rgba(255, 0, 0, 0) 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    animation: lavaSplash 0.5s forwards;
+}
+
+@keyframes lavaSplash {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* Flame Flicker Effect */
+.flame-flicker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 0, 0, 0.1) 0px,
+            rgba(255, 0, 0, 0.1) 1px,
+            transparent 1px,
+            transparent 2px
+        );
+    z-index: -1;
+    opacity: 0.5;
+    animation: flicker 0.5s infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0.7;
+        transform: translateY(-1px);
+    }
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visitor-counter {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 1rem;
+}
+
+.visitor-counter span {
+    display: inline-block;
+}
+
+#visitor-counter {
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
 }

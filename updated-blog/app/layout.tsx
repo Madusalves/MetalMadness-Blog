@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Metal_Mania, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
+import React from "react";
+import Header from "./components/Header/header";
+import Hero from "./components/Hero/hero";
+import Main from "./components/Main/main";
+import Footer from "./components/Footer/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +16,18 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const metalMania = Metal_Mania({
+  variable: "--font-metal-mania",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const robotoCondensed = Roboto_Condensed({
+  variable: "--font-roboto-condensed",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -24,9 +42,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossOrigin="anonymous" 
+          referrerPolicy="no-referrer" />
+      </head>"
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+       className={`
+        ${geistSans.variable} 
+        ${geistMono.variable}
+        ${metalMania.variable} 
+        ${robotoCondensed.variable}
+        antialiased
+      `}>
+      
+        <Header />
+        <Hero />
+        <Main />
+        <Footer />
+        
         {children}
       </body>
     </html>
