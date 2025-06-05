@@ -609,3 +609,158 @@
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
 }
+
+.feedback_section {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.feedback_container {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+}
+
+.feedback_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form_textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--section-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    resize: vertical;
+    min-height: 150px;
+    font-family: 'Roboto Condensed', sans-serif;
+    transition: var(--transition);
+}
+
+.form_textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.rating_stars {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.rating_stars_input {
+    display: none;
+}
+
+.rating-stars_label {
+    font-size: 30px;
+    color: var(--border-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.rating-stars_label:hover,
+.rating-stars_label:hover ~ .rating-stars_label,
+.rating-stars_input:checked ~ .rating-stars_label {
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+.submit_btn {
+    background: var(--flame-gradient);
+    color: var(--text-color);
+    padding: 15px 30px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: 'Metal Mania', cursive;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit_btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+.submit_btn:active {
+    transform: translateY(0);
+}
+
+.social_media_widget {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.social_media_widget .widget_title {
+    font-family: 'Metal Mania', cursive;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.social_links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social_link {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: var(--section-bg);
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    border-left: 4px solid var(--primary-color);
+}
+
+.social_link .fab {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.social_link_instagram{
+    border-left-color: #E1306C;
+}
+
+.social_link_instagram:hover {
+    background-color: rgba(225, 48, 108, 0.2);
+    transform: translateX(5px);
+}
+
+.social_link_linkedin {
+    border-left-color: #0077B5;
+}
+
+.social_link_linkedin:hover {
+    background-color: rgba(0, 119, 181, 0.2);
+    transform: translateX(5px);
+}
+
+.social_link_github {
+    border-left-color: #333;
+}
+
+.social_link_github:hover {
+    background-color: rgba(51, 51, 51, 0.2);
+    transform: translateX(5px);
+}
