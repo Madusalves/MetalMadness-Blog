@@ -1,0 +1,63 @@
+.hero_banner {
+    /*background: url('../images/hero-banner.jpg');*/
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero_banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.2), transparent);
+    z-index: 1;
+}
+
+.banner_content {
+    position: relative;
+    z-index: 2;
+}
+
+.banner_title {
+    font-family: 'Metal Mania', cursive;
+    font-size: 3.5rem;
+    color: #ff0000;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.banner_text {
+    font-size: 1.2rem;
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+
+
+/* Mantendo os estilos antigos para compatibilidade */
+.hero_banner h1 {
+    font-family: 'Metal Mania', cursive;
+    font-size: 3.5rem;
+    color: #ff0000;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.hero_banner p {
+    font-size: 1.2rem;
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
