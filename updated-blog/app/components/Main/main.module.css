@@ -1,0 +1,611 @@
+.main_container {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Main Content */
+.main_content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Featured Post */
+.featured_post {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background-color: var(--section-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.featured_image {
+    height: 100%;
+    overflow: hidden;
+}
+
+.featured_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured_post:hover .featured_image img {
+    transform: scale(1.05);
+}
+
+.featured_content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured_title {
+    font-family: 'Metal Mania', cursive;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.featured_date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.featured_excerpt {
+    margin-bottom: 20px;
+}
+
+
+/* Content Sections */
+.content_section {
+    background-color: var(--section-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+}
+
+.section_title {
+    font-family: 'Metal Mania', cursive;
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.section_divider {
+    height: 2px;
+    background: var(--flame-gradient);
+    margin: 0 auto 30px;
+    width: 100px;
+}
+
+/* News Grid */
+.news_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.news_item {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.news_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.news_image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.news_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news_item:hover .news-image img {
+    transform: scale(1.1);
+}
+
+.news_content {
+    padding: 20px;
+}
+
+.news_content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.news_date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Reviews Grid */
+.reviews_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.review_item {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.review_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.review_image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.review_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.review_item:hover .review_image img {
+    transform: scale(1.1);
+}
+
+.review_content {
+    padding: 20px;
+}
+
+.review_content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.review_date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.review_rating {
+    margin-bottom: 15px;
+}
+
+.rating_label {
+    color: var(--text-secondary);
+    margin-right: 5px;
+}
+
+.rating_stars {
+    color: #ffcc00;
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+/* Metal Posters Grid */
+.posters_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.poster_item {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    aspect-ratio: 2/3;
+    background-color: var(--card-bg);
+}
+
+.poster_item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+}
+
+.poster_image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.poster_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.poster_item:hover .poster_image img {
+    transform: scale(1.1);
+}
+
+.poster_overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, 
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.7) 50%,
+        transparent 100%);
+    color: var(--text-color);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.poster_item:hover .poster_overlay {
+    transform: translateY(0);
+}
+
+.poster_overlay h3 {
+    font-family: 'Metal Mania', cursive;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.poster_overlay p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+}
+
+.poster_year {
+    display: inline-block;
+    padding: 3px 8px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+/* Forum Styles */
+.forum_container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+}
+
+.forum_table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.forum_header {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.forum_header th {
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.forum_row {
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.forum_row:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.forum_row td {
+    padding: 15px;
+}
+
+.forum_login {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.forum_login h3 {
+    font-family: 'Metal Mania', cursive;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form_group {
+    margin-bottom: 15px;
+}
+
+.form_group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+}
+
+.form_input {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--section-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.form_input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.form_buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Read More Button */
+.read_more_btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    transition: var(--transition);
+    margin-top: 15px;
+}
+
+.read_more_btn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.sidebar_widget {
+    background-color: var(--section-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+}
+
+.widget_title {
+    font-family: 'Metal Mania', cursive;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    padding: 15px;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--primary-color);
+    text-align: center;
+    margin: 0;
+}
+
+.widget_content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.widget_content img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.widget_content p {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.widget_text {
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* Ajustes específicos para o widget de estatísticas */
+.sidebar_widget:first-child .widget_content {
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar_widget:first-child .widget_content p {
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Ajustes para o widget de bandas */
+.top_bands {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.top_bands:last-child li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.top_bands li {
+    border-bottom: none;
+}
+
+.top_bands li:hover {
+    color: var(--primary-color);
+    padding-left: 10px;
+}
+
+/* Ajustes para o widget de prêmios */
+.widget_content_awards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.widget_content_h2  {
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+    color: var(--primary-color);
+}
+
+.widget_content_p  {
+    margin: 0 0 15px 0;
+}
+
+.vote_button {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.vote_button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+/* Ajustes para o widget de feedback */
+.sidebar_feedback_form {
+    width: 100%;
+}
+
+.sidebar_feedback_form .form_group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.sidebar_feedback_form .form_input,
+.sidebar_feedback_form .form_textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--section-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.sidebar_feedback_form .form_textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.sidebar_feedback_form .rating_stars {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5px;
+    justify-content: center;
+}
+
+.sidebar_feedback_form .rating_stars_label  {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar_feedback_form .submit_btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.sidebar_feedback_form .submit_btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
