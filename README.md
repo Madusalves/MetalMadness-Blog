@@ -2,8 +2,7 @@
 A nostalgic and dark blog dedicated to the world of metal!
 
 ## ⚙️ Technologies
-- HTML
--CSS
+- Nextjs
 - TailwindCSS
 - Javascript
 
