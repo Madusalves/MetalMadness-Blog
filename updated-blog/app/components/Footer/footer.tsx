@@ -7,7 +7,7 @@ export default function Footer() {
       <footer className={styles.site_footer}>
         <div className={styles.footer_container}>
             <div className={styles.footer_divider}></div>
-            <p className={styles.copyright}>© 2024 METAL MADNESS. All rights reserved.</p>
+            <p className={styles.copyright}>© 2025 METAL MADNESS. All rights reserved.</p>
             <p>Made with ❤️ by <a href="https://github.com/Madusalves">Maria Eduarda</a></p>
             <p className={styles.last_updated}> Last updated: <span id="footer-date">{getTodayDate()}</span></p>
         </div>
