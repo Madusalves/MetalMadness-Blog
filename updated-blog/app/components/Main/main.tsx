@@ -35,7 +35,7 @@ export default function Header() {
                     <div className={styles.news_grid}>
                         <article className={styles.news_item}>
                             <div className={styles.news_image}>
-                                <img src="images/Knocked Loose.jpeg" alt="Metallica" />
+                                <Image src="images/Knocked Loose.jpeg" alt="Metallica" />
                             </div>
                             <div className={styles.news_content}>
                                 <h3>Knocked Loose Announces New World Tour</h3>
@@ -47,7 +47,7 @@ export default function Header() {
                         
                         <article className={styles.news_item}>
                             <div className={styles.news_image}>
-                                <img src="images/Powerwolf.jpeg" alt="Slayer" />
+                                <Image src="images/Powerwolf.jpeg" alt="Slayer" />
                             </div>
                             <div className={styles.news_content}>
                                 <h3>New Powerwolf Album Coming Soon</h3>
@@ -66,7 +66,7 @@ export default function Header() {
                     <div className={styles.reviews_grid}>
                         <article className={styles.review_item}>
                             <div className={styles.review_image}>
-                                <img src="images/TSTD&D.jpeg" alt="Megadeth Album" />
+                                <Image src="images/TSTD&D.jpeg" alt="Megadeth Album" />
                             </div>
                             <div className={styles.review_content}>
                                 <h3>Megadeth - The Sick, The Dying... And The Dead!</h3>
@@ -82,7 +82,7 @@ export default function Header() {
                         
                         <article className={styles.review_item}>
                             <div className={styles.review_image}>
-                                <img src="images/Senjutsu.jpeg" alt="Iron Maiden Album" />
+                                <Image src="images/Senjutsu.jpeg" alt="Iron Maiden Album" />
                             </div>
                             <div className={styles.review_content}>
                                 <h3>Iron Maiden - Senjutsu</h3>
@@ -105,7 +105,7 @@ export default function Header() {
                     <div className={styles.posters_grid}>
                         <article className={styles.poster_item}>
                             <div className={styles.poster_image}>
-                                <img src="images/posters/archEnemy.jpeg" alt="Arch Enemy Poster" />
+                                <Image src="images/posters/archEnemy.jpeg" alt="Arch Enemy Poster" />
                                 <div className={styles.poster_overlay}>
                                     <h3>Arch Enemy</h3>
                                     <p>Poster Collection</p>
@@ -116,7 +116,7 @@ export default function Header() {
                         
                         <article className={styles.poster_item}>
                             <div className={styles.poster_image}>
-                                <img src="images/posters/Megadeth (2).jpeg" alt="Megadeth Poster" />
+                                <Image src="images/posters/Megadeth (2).jpeg" alt="Megadeth Poster" />
                                 <div className={styles.poster_overlay}>
                                     <h3>Megadeth</h3>
                                     <p>Poisonous Shadows</p>
@@ -127,7 +127,7 @@ export default function Header() {
                         
                         <article className={styles.poster_item}>
                             <div className={styles.poster_image}>
-                                <img src="images/posters/bS.jpeg" alt="Black Sabbath Poster" />
+                                <Image src="images/posters/bS.jpeg" alt="Black Sabbath Poster" />
                                 <div className={styles.poster_overlay}>
                                     <h3>Black Sabbath</h3>
                                     <p>Black Sabbath</p>
@@ -138,7 +138,7 @@ export default function Header() {
                         
                         <article className={styles.poster_item}>
                             <div className={styles.poster_image}>
-                                <img src="images/posters/MW.jpeg" alt="Slayer Poster" />
+                                <Image src="images/posters/MW.jpeg" alt="Slayer Poster" />
                                 <div className={styles.poster_overlay}>
                                     <h3>Montionless in White</h3>
                                     <p>Disguise</p>
@@ -267,7 +267,7 @@ export default function Header() {
                 <div className={styles.sidebar_widget}>
                     <h3 className={styles.widget_title}>UNDER CONSTRUCTION</h3>
                     <div className={styles.widget_content}>
-                        <img src="images/under_construction/engrenagem-unscreen.gif" alt="Under Construction" />
+                        <Image src="images/under_construction/engrenagem-unscreen.gif" alt="Under Construction" />
                         <p className={styles.widget_text}>This page is under construction. Please check back soon!</p>
                     </div>
                 </div>
