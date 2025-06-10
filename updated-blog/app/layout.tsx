@@ -49,7 +49,7 @@ export default function RootLayout({
           integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
           crossOrigin="anonymous" 
           referrerPolicy="no-referrer" />
-      </head>"
+      </head>
       <body
        className={`
         ${geistSans.variable} 

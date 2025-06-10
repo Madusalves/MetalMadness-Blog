@@ -35,7 +35,7 @@ export default function Header() {
                     <div className={styles.news_grid}>
                         <article className={styles.news_item}>
                             <div className={styles.news_image}>
-                                <Image src="images/Knocked Loose.jpeg" alt="Metallica" />
+                                <Image src="images/Knocked_Loose.jpeg" alt="Metallica" />
                             </div>
                             <div className={styles.news_content}>
                                 <h3>Knocked Loose Announces New World Tour</h3>
@@ -52,7 +52,7 @@ export default function Header() {
                             <div className={styles.news_content}>
                                 <h3>New Powerwolf Album Coming Soon</h3>
                                 <p className={styles.news_date}>April 19, 2025</p>
-                                <p>"Last year, we had an incredible time with all of you, playing to sold-out crowds and making lasting memories"</p>
+                                <p>Last year, we had an incredible time with all of you, playing to sold-out crowds and making lasting memories</p>
                                 <a href="#" className={styles.read_more_btn}>READ MORE</a>
                             </div>
                         </article>
