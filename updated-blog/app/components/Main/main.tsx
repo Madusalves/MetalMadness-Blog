@@ -13,7 +13,7 @@ export default function Header() {
                 <section className={styles.featured_post}>
                     <div className={styles.featured_image}>
                         <Image
-                            src="/AX72025.jpeg"
+                            src="https://th.bing.com/th/id/R.d69f1c4c5f229af93aae71e5ef53afa0?rik=GnHsw%2bLdyVm2XA&riu=http%3a%2f%2fwww.laut.de%2fbilder%2fwortlaut%2fartists%2fa%2farch_enemy%2fartist-image%2c152471.jpg&ehk=UjU6%2f3HWf6Lin53PHkBSwnhKiJ0HZPCFf38W%2fiKF7V4%3d&risl=&pid=ImgRaw&r=0"
                             alt="Featured Metal Band - Arch Enemy"
                             width={600} // ajuste o tamanho conforme necessário
                             height={400}
@@ -35,7 +35,10 @@ export default function Header() {
                     <div className={styles.news_grid}>
                         <article className={styles.news_item}>
                             <div className={styles.news_image}>
-                                <Image src="images/Knocked_Loose.jpeg" alt="Metallica" />
+                                <Image src="https://th.bing.com/th/id/R.d69f1c4c5f229af93aae71e5ef53afa0?rik=GnHsw%2bLdyVm2XA&riu=http%3a%2f%2fwww.laut.de%2fbilder%2fwortlaut%2fartists%2fa%2farch_enemy%2fartist-image%2c152471.jpg&ehk=UjU6%2f3HWf6Lin53PHkBSwnhKiJ0HZPCFf38W%2fiKF7V4%3d&risl=&pid=ImgRaw&r=0" 
+                                    alt="Metallica"
+                                    width={600} // ajuste o tamanho conforme necessário
+                                    height={400} />
                             </div>
                             <div className={styles.news_content}>
                                 <h3>Knocked Loose Announces New World Tour</h3>
@@ -47,7 +50,10 @@ export default function Header() {
                         
                         <article className={styles.news_item}>
                             <div className={styles.news_image}>
-                                <Image src="images/Powerwolf.jpeg" alt="Slayer" />
+                                <Image src="https://th.bing.com/th/id/R.d69f1c4c5f229af93aae71e5ef53afa0?rik=GnHsw%2bLdyVm2XA&riu=http%3a%2f%2fwww.laut.de%2fbilder%2fwortlaut%2fartists%2fa%2farch_enemy%2fartist-image%2c152471.jpg&ehk=UjU6%2f3HWf6Lin53PHkBSwnhKiJ0HZPCFf38W%2fiKF7V4%3d&risl=&pid=ImgRaw&r=0" 
+                                alt="Slayer"
+                                width={600} // ajuste o tamanho conforme necessário
+                                height={400} />
                             </div>
                             <div className={styles.news_content}>
                                 <h3>New Powerwolf Album Coming Soon</h3>
@@ -66,7 +72,12 @@ export default function Header() {
                     <div className={styles.reviews_grid}>
                         <article className={styles.review_item}>
                             <div className={styles.review_image}>
-                                <Image src="images/TSTD&D.jpeg" alt="Megadeth Album" />
+                                <Image src="https://th.bing.com/th/id/R.d69f1c4c5f229af93aae71e5ef53afa0?rik=GnHsw%2bLdyVm2XA&riu=http%3a%2f%2fwww.laut.de%2fbilder%2fwortlaut%2fartists%2fa%2farch_enemy%2fartist-image%2c152471.jpg&ehk=UjU6%2f3HWf6Lin53PHkBSwnhKiJ0HZPCFf38W%2fiKF7V4%3d&risl=&pid=ImgRaw&r=0" 
+                                alt="Megadeth Album"
+                                width={600} // ajuste o tamanho conforme necessário
+                                height={400}
+                                
+                                />
                             </div>
                             <div className={styles.review_content}>
                                 <h3>Megadeth - The Sick, The Dying... And The Dead!</h3>
@@ -82,7 +93,10 @@ export default function Header() {
                         
                         <article className={styles.review_item}>
                             <div className={styles.review_image}>
-                                <Image src="images/Senjutsu.jpeg" alt="Iron Maiden Album" />
+                                <Image src="https://th.bing.com/th/id/R.d69f1c4c5f229af93aae71e5ef53afa0?rik=GnHsw%2bLdyVm2XA&riu=http%3a%2f%2fwww.laut.de%2fbilder%2fwortlaut%2fartists%2fa%2farch_enemy%2fartist-image%2c152471.jpg&ehk=UjU6%2f3HWf6Lin53PHkBSwnhKiJ0HZPCFf38W%2fiKF7V4%3d&risl=&pid=ImgRaw&r=0"
+                                alt="Iron Maiden Album"
+                                width={600} // ajuste o tamanho conforme necessário
+                                height={400} />
                             </div>
                             <div className={styles.review_content}>
                                 <h3>Iron Maiden - Senjutsu</h3>
@@ -105,7 +119,10 @@ export default function Header() {
                     <div className={styles.posters_grid}>
                         <article className={styles.poster_item}>
                             <div className={styles.poster_image}>
-                                <Image src="images/posters/archEnemy.jpeg" alt="Arch Enemy Poster" />
+                                <Image src="https://th.bing.com/th/id/R.d69f1c4c5f229af93aae71e5ef53afa0?rik=GnHsw%2bLdyVm2XA&riu=http%3a%2f%2fwww.laut.de%2fbilder%2fwortlaut%2fartists%2fa%2farch_enemy%2fartist-image%2c152471.jpg&ehk=UjU6%2f3HWf6Lin53PHkBSwnhKiJ0HZPCFf38W%2fiKF7V4%3d&risl=&pid=ImgRaw&r=0" 
+                                alt="Arch Enemy Poster"
+                                width={600} // ajuste o tamanho conforme necessário
+                                height={400} />
                                 <div className={styles.poster_overlay}>
                                     <h3>Arch Enemy</h3>
                                     <p>Poster Collection</p>
@@ -116,7 +133,10 @@ export default function Header() {
                         
                         <article className={styles.poster_item}>
                             <div className={styles.poster_image}>
-                                <Image src="images/posters/Megadeth (2).jpeg" alt="Megadeth Poster" />
+                                <Image src="https://th.bing.com/th/id/R.d69f1c4c5f229af93aae71e5ef53afa0?rik=GnHsw%2bLdyVm2XA&riu=http%3a%2f%2fwww.laut.de%2fbilder%2fwortlaut%2fartists%2fa%2farch_enemy%2fartist-image%2c152471.jpg&ehk=UjU6%2f3HWf6Lin53PHkBSwnhKiJ0HZPCFf38W%2fiKF7V4%3d&risl=&pid=ImgRaw&r=0"
+                                alt="Megadeth Poster"
+                                width={600} // ajuste o tamanho conforme necessário
+                                height={400} />
                                 <div className={styles.poster_overlay}>
                                     <h3>Megadeth</h3>
                                     <p>Poisonous Shadows</p>
@@ -127,7 +147,10 @@ export default function Header() {
                         
                         <article className={styles.poster_item}>
                             <div className={styles.poster_image}>
-                                <Image src="images/posters/bS.jpeg" alt="Black Sabbath Poster" />
+                                <Image src="https://th.bing.com/th/id/R.d69f1c4c5f229af93aae71e5ef53afa0?rik=GnHsw%2bLdyVm2XA&riu=http%3a%2f%2fwww.laut.de%2fbilder%2fwortlaut%2fartists%2fa%2farch_enemy%2fartist-image%2c152471.jpg&ehk=UjU6%2f3HWf6Lin53PHkBSwnhKiJ0HZPCFf38W%2fiKF7V4%3d&risl=&pid=ImgRaw&r=0" 
+                                alt="Black Sabbath Poster" 
+                                width={600} // ajuste o tamanho conforme necessário
+                                height={400}/>
                                 <div className={styles.poster_overlay}>
                                     <h3>Black Sabbath</h3>
                                     <p>Black Sabbath</p>
@@ -138,7 +161,10 @@ export default function Header() {
                         
                         <article className={styles.poster_item}>
                             <div className={styles.poster_image}>
-                                <Image src="images/posters/MW.jpeg" alt="Slayer Poster" />
+                                <Image src="https://th.bing.com/th/id/R.d69f1c4c5f229af93aae71e5ef53afa0?rik=GnHsw%2bLdyVm2XA&riu=http%3a%2f%2fwww.laut.de%2fbilder%2fwortlaut%2fartists%2fa%2farch_enemy%2fartist-image%2c152471.jpg&ehk=UjU6%2f3HWf6Lin53PHkBSwnhKiJ0HZPCFf38W%2fiKF7V4%3d&risl=&pid=ImgRaw&r=0" 
+                                width={600} // ajuste o tamanho conforme necessário
+                                height={400}
+                                alt="Slayer Poster" />
                                 <div className={styles.poster_overlay}>
                                     <h3>Montionless in White</h3>
                                     <p>Disguise</p>
@@ -267,7 +293,10 @@ export default function Header() {
                 <div className={styles.sidebar_widget}>
                     <h3 className={styles.widget_title}>UNDER CONSTRUCTION</h3>
                     <div className={styles.widget_content}>
-                        <Image src="images/under_construction/engrenagem-unscreen.gif" alt="Under Construction" />
+                        <Image src="https://th.bing.com/th/id/R.d69f1c4c5f229af93aae71e5ef53afa0?rik=GnHsw%2bLdyVm2XA&riu=http%3a%2f%2fwww.laut.de%2fbilder%2fwortlaut%2fartists%2fa%2farch_enemy%2fartist-image%2c152471.jpg&ehk=UjU6%2f3HWf6Lin53PHkBSwnhKiJ0HZPCFf38W%2fiKF7V4%3d&risl=&pid=ImgRaw&r=0" 
+                        alt="Under Construction"
+                        width={600} // ajuste o tamanho conforme necessário
+                        height={400} />
                         <p className={styles.widget_text}>This page is under construction. Please check back soon!</p>
                     </div>
                 </div>
