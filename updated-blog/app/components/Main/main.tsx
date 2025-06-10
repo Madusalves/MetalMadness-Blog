@@ -13,9 +13,9 @@ export default function Header() {
                 <section className={styles.featured_post}>
                     <div className={styles.featured_image}>
                         <Image
-                            src="https://i.ytimg.com/vi/imtlnUfSHB4/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGFogWihaMA8=&rs=AOn4CLAGAjSuVuYZSRtw9gme3HOw5bsOyw"
+                            src="https://i.pinimg.com/736x/0f/19/bd/0f19bda921cb149d748d349a4eb74753.jpg"
                             alt="Avenged Sevenfold Tour"
-                            width={600} // ajuste o tamanho conforme necessário
+                            width={500} // ajuste o tamanho conforme necessário
                             height={400}
                         />
                         
@@ -42,7 +42,7 @@ export default function Header() {
                             </div>
                             <div className={styles.news_content}>
                                 <h3>Knocked Loose Announces New World Tour</h3>
-                                <p className={styles.news_date}>April 19, 2025</p>
+                                <p className={styles.news_date}>June 10, 2025</p>
                                 <p>Metallica has just announced their new world tour starting in September. The band will be performing in over 30 countries...</p>
                                 <a href="#" className={styles.read_more_btn}>READ MORE</a>
                             </div>
@@ -57,7 +57,7 @@ export default function Header() {
                             </div>
                             <div className={styles.news_content}>
                                 <h3>New Powerwolf Album Coming Soon</h3>
-                                <p className={styles.news_date}>April 19, 2025</p>
+                                <p className={styles.news_date}>June 10, 2025</p>
                                 <p>Last year, we had an incredible time with all of you, playing to sold-out crowds and making lasting memories</p>
                                 <a href="#" className={styles.read_more_btn}>READ MORE</a>
                             </div>
@@ -72,16 +72,16 @@ export default function Header() {
                     <div className={styles.reviews_grid}>
                         <article className={styles.review_item}>
                             <div className={styles.review_image}>
-                                <Image src="https://br.pinterest.com/pin/361554676342724229/" 
+                                <Image src="https://i.pinimg.com/736x/69/42/51/694251d2c78a8f32517897850e9fe7a8.jpg" 
                                 alt="Megadeth Album"
-                                width={600} // ajuste o tamanho conforme necessário
-                                height={400}
+                                width={500} // ajuste o tamanho conforme necessário
+                                height={500}
                                 
                                 />
                             </div>
                             <div className={styles.review_content}>
                                 <h3>Megadeth - The Sick, The Dying... And The Dead!</h3>
-                                <p className={styles.review_date}>April 19, 2025</p>
+                                <p className={styles.review_date}>June 10, 2025</p>
                                 <div className={styles.review_rating}>
                                     <span className={styles.rating_label}>Rating:</span>
                                     <span className={styles.rating_stars}>★★★★★</span>
@@ -93,14 +93,14 @@ export default function Header() {
                         
                         <article className={styles.review_item}>
                             <div className={styles.review_image}>
-                                <Image src="https://br.pinterest.com/pin/126734177008273823/"
+                                <Image src="https://i.pinimg.com/736x/98/1b/b3/981bb38fa8d0f61974ccefd247846a78.jpg"
                                 alt="Iron Maiden Album"
                                 width={600} // ajuste o tamanho conforme necessário
                                 height={400} />
                             </div>
                             <div className={styles.review_content}>
                                 <h3>Iron Maiden - Senjutsu</h3>
-                                <p className={styles.review_date}>April 19, 2025</p>
+                                <p className={styles.review_date}>June 10, 2025</p>
                                 <div className={styles.review_rating}>
                                     <span className={styles.rating_label}>Rating:</span>
                                     <span className={styles.rating_stars}>★★★★☆</span>
@@ -133,7 +133,7 @@ export default function Header() {
                         
                         <article className={styles.poster_item}>
                             <div className={styles.poster_image}>
-                                <Image src="https://br.pinterest.com/pin/8092474325540701/"
+                                <Image src="https://i.pinimg.com/736x/20/b9/fc/20b9fc922535a1fc510d599a85012b9c.jpg"
                                 alt="Megadeth Poster"
                                 width={600} // ajuste o tamanho conforme necessário
                                 height={400} />
@@ -147,7 +147,7 @@ export default function Header() {
                         
                         <article className={styles.poster_item}>
                             <div className={styles.poster_image}>
-                                <Image src="https://br.pinterest.com/pin/23643966788668528/" 
+                                <Image src="https://i.pinimg.com/736x/8a/e4/81/8ae481d089530f5f62f0305548db2668.jpg" 
                                 alt="Black Sabbath Poster" 
                                 width={600} // ajuste o tamanho conforme necessário
                                 height={400}/>
@@ -161,7 +161,7 @@ export default function Header() {
                         
                         <article className={styles.poster_item}>
                             <div className={styles.poster_image}>
-                                <Image src="https://br.pinterest.com/pin/410812797282746452/" 
+                                <Image src="https://i.pinimg.com/736x/2c/28/f3/2c28f356db7c66615fd37a3957920593.jpg" 
                                 width={600} // ajuste o tamanho conforme necessário
                                 height={400}
                                 alt="Montionless in White Poster" />
@@ -219,21 +219,21 @@ export default function Header() {
                                         <td><a href="#">Best Metal Album of 2024?</a></td>
                                         <td>MetalHead</td>
                                         <td>42</td>
-                                        <td>April 19, 2025</td>
+                                        <td>June 10, 2025</td>
                                         <td>1,337</td>
                                     </tr>
                                     <tr className={styles.forum_row}>
                                         <td><a href="#">Upcoming Metal Concerts</a></td>
                                         <td>ThrashMaster</td>
                                         <td>18</td>
-                                        <td>April 19, 2025</td>
+                                        <td>June 10, 2025</td>
                                         <td>856</td>
                                     </tr>
                                     <tr className={styles.forum_row}>
                                         <td><a href="#">Classic vs Modern Metal</a></td>
                                         <td>OldSchool</td>
                                         <td>67</td>
-                                        <td>April 19, 2025</td>
+                                        <td>June 10, 2025</td>
                                         <td>2,145</td>
                                     </tr>
                                 </tbody>
@@ -293,10 +293,10 @@ export default function Header() {
                 <div className={styles.sidebar_widget}>
                     <h3 className={styles.widget_title}>UNDER CONSTRUCTION</h3>
                     <div className={styles.widget_content}>
-                        <Image src="https://br.pinterest.com/pin/220957925462744419/" 
+                        {/*<Image src="https://br.pinterest.com/pin/220957925462744419/" 
                         alt="Under Construction"
                         width={600} // ajuste o tamanho conforme necessário
-                        height={400} />
+                        height={400} />a*/}
                         <p className={styles.widget_text}>This page is under construction. Please check back soon!</p>
                     </div>
                 </div>
