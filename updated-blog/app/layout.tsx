@@ -3,10 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Metal_Mania, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import React from "react";
-import Header from "./components/Header/header";
-import Hero from "./components/Hero/hero";
-import Main from "./components/Main/main";
-import Footer from "./components/Footer/footer";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,11 +55,6 @@ export default function RootLayout({
         ${robotoCondensed.variable}
         antialiased
       `}>
-      
-        <Header />
-        <Hero />
-        <Main />
-        <Footer />
         
         {children}
       </body>
