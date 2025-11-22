@@ -346,49 +346,170 @@
 @media (max-width: 1024px) {
     .content-wrapper {
         grid-template-columns: 1fr;
+        padding: 0 1rem;
     }
     
     .sidebar {
         order: -1;
+        max-width: 100%;
+    }
+
+    .main-content {
+        width: 100%;
     }
 }
 
 @media (max-width: 768px) {
+    .hero-banner-reviews {
+        padding: 2rem 1rem;
+    }
+
     .hero-banner-reviews h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .hero-banner-reviews p {
+        font-size: 1rem;
     }
     
+    .content-wrapper {
+        padding: 0 1rem;
+        gap: 1.5rem;
+    }
+
     .featured-review {
         grid-template-columns: 1fr;
-    }
-
-    .featured-title {
-        font-size: 2rem;
-    }
-
-    .reviews-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .categories-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-banner-reviews  h1 {
-        font-size: 2rem;
-    }
-    
-    .categories-grid {
-        grid-template-columns: 1fr;
+        padding: 1.5rem;
+        gap: 1.5rem;
     }
 
     .featured-title {
         font-size: 1.8rem;
     }
 
+    .featured-excerpt {
+        font-size: 1rem;
+    }
+
+    .reviews-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .review-content {
+        padding: 1rem;
+    }
+
     .review-content h3 {
         font-size: 1.3rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .category-card {
+        padding: 1.5rem;
+    }
+
+    .category-icon {
+        font-size: 2rem;
+    }
+
+    .category-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .sidebar-widget {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-banner-reviews {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero-banner-reviews h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-banner-reviews p {
+        font-size: 0.9rem;
+    }
+    
+    .content-wrapper {
+        padding: 0 10px;
+        gap: 1rem;
+    }
+
+    .featured-review {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .featured-title {
+        font-size: 1.5rem;
+    }
+
+    .featured-excerpt {
+        font-size: 0.95rem;
+    }
+
+    .reviews-section h2 {
+        font-size: 1.3rem;
+        padding-left: 0.5rem;
+    }
+
+    .reviews-section h2::before {
+        width: 3px;
+    }
+    
+    .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .category-card {
+        padding: 1rem;
+    }
+
+    .category-icon {
+        font-size: 1.8rem;
+    }
+
+    .category-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .review-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .review-content p {
+        font-size: 0.9rem;
+    }
+
+    .read-more-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    .sidebar-widget {
+        margin-bottom: 1rem;
+    }
+
+    .widget-title {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+
+    .widget-content {
+        padding: 12px;
     }
 } 

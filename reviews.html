@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Reviews - Metal Madness</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/reviews.css">
@@ -16,14 +16,19 @@
                 <h1 class="site-title">METAL MADNESS</h1>
                 <p class="site-tagline">Your Ultimate Metal Blog</p>
             </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#home" class="nav-link">HOME</a></li>
-                    <li><a href="#news" class="nav-link">NEWS</a></li>
-                    <li><a href="#reviews" class="nav-link">REVIEWS</a></li>
-                    <li><a href="#posters" class="nav-link">POSTERS</a></li>
-                    <li><a href="#playlist" class="nav-link">PLAYLIST</a></li>
-                    <li><a href="#forum" class="nav-link">FORUM</a></li>
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="index.html#news" class="nav-link">NEWS</a></li>
+                    <li><a href="index.html#reviews" class="nav-link">REVIEWS</a></li>
+                    <li><a href="index.html#posters" class="nav-link">POSTERS</a></li>
+                    <li><a href="index.html#playlist" class="nav-link">PLAYLIST</a></li>
+                    <li><a href="index.html#forum" class="nav-link">FORUM</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,7 +45,7 @@
                 <!-- Featured Review -->
                 <section class="featured-review">
                     <div class="featured-image">
-                        <img src="images/featured-review.jpg" alt="Álbum em Destaque">
+                        <img src="images/TSTD&D.jpeg" alt="Álbum em Destaque">
                     </div>
                     <div class="featured-content">
                         <h2 class="featured-title">Metallica - Master of Puppets</h2>
@@ -63,7 +68,7 @@
                         <!-- Review Item 1 -->
                         <article class="review-item">
                             <div class="review-image">
-                                <img src="images/review1.jpg" alt="Iron Maiden - Senjutsu">
+                                <img src="images/Senjutsu.jpeg" alt="Iron Maiden - Senjutsu">
                             </div>
                             <div class="review-content">
                                 <h3>Iron Maiden - Senjutsu</h3>
@@ -80,7 +85,7 @@
                         <!-- Review Item 2 -->
                         <article class="review-item">
                             <div class="review-image">
-                                <img src="images/review2.jpg" alt="Slayer - Reign in Blood">
+                                <img src="images/bloodline.jpeg" alt="Slayer - Reign in Blood">
                             </div>
                             <div class="review-content">
                                 <h3>Slayer - Reign in Blood</h3>
@@ -97,7 +102,7 @@
                         <!-- Review Item 3 -->
                         <article class="review-item">
                             <div class="review-image">
-                                <img src="images/review3.jpg" alt="Black Sabbath - Paranoid">
+                                <img src="images/posters/bS.jpeg" alt="Black Sabbath - Paranoid">
                             </div>
                             <div class="review-content">
                                 <h3>Black Sabbath - Paranoid</h3>
@@ -186,7 +191,7 @@
                 <div class="sidebar-widget">
                     <h3>REVIEWER DO MÊS</h3>
                     <div class="reviewer-profile">
-                        <img src="images/reviewer.jpg" alt="Reviewer" class="reviewer-image">
+                        <img src="images/AX72025.jpeg" alt="Reviewer" class="reviewer-image">
                         <h4>Metal Head</h4>
                         <p>Especialista em thrash metal e heavy metal clássico</p>
                     </div>
@@ -251,11 +256,45 @@
     </div>
 
     <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.querySelector('.main-nav');
+            
+            if (mobileMenuToggle && mainNav) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    mainNav.classList.toggle('active');
+                });
+
+                // Close menu when clicking on a link
+                const navLinks = mainNav.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        mainNav.classList.remove('active');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    const isClickInsideNav = mainNav.contains(event.target);
+                    const isClickOnToggle = mobileMenuToggle.contains(event.target);
+                    
+                    if (!isClickInsideNav && !isClickOnToggle && mainNav.classList.contains('active')) {
+                        mobileMenuToggle.classList.remove('active');
+                        mainNav.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
         // Audio Player functionality
         const backgroundMusic = document.createElement('audio');
         backgroundMusic.id = 'background-music';
         backgroundMusic.loop = true;
-        backgroundMusic.src = 'audio/metal-background.mp3';
+        backgroundMusic.src = 'audio/nothing-else-matters.mp3';
         document.body.appendChild(backgroundMusic);
 
         const audioPlayer = document.querySelector('.audio-player');
